@@ -26,6 +26,7 @@ public class ShootController : MonoBehaviour
      void OnTriggerEnter2D(Collider2D collision)
     {
         Instantiate(bulletEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
         Destroy(bulletEffect);
     }
 }

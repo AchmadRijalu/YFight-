@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
+
     public KeyCode left;
     public KeyCode right;
     public KeyCode jump;
@@ -41,10 +42,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(left))
         {
             rigidbody.velocity = new Vector2(-moveSpeed, rigidbody.velocity.y);
+            transform.localScale = new Vector2(-2,2);
         }
         else if (Input.GetKey(right))
         {
             rigidbody.velocity = new Vector2(moveSpeed, rigidbody.velocity.y);
+            transform.localScale = new Vector2(2, 2);
         }
         else
         {
@@ -64,14 +67,6 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (rigidbody.velocity.x < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if(rigidbody.velocity.x > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
 
     }
 }
