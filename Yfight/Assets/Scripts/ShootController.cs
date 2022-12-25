@@ -11,6 +11,11 @@ public class ShootController : MonoBehaviour
     private Rigidbody2D rigidBody;
 
     public GameObject bulletEffect;
+
+    public PlayerHealth playerHealth1;
+    public PlayerHealth playerHealth2;
+
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -23,10 +28,26 @@ public class ShootController : MonoBehaviour
 
     }
 
-     void OnTriggerEnter2D(Collider2D collision)
+     private void OnTriggerEnter2D(Collider2D collision)
     {
         Instantiate(bulletEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+
+       
+        
+    
+        if (collision.gameObject.tag == "Player2")
+        {
+            var health = collision.GetComponent<PlayerHealth>();
+            health.takeDamage(1);
+            Debug.Log("hit player 2");
+        }
+        if (collision.gameObject.tag == "Player1")
+        {
+            var health = collision.GetComponent<PlayerHealth>();
+            health.takeDamage(1);
+            Debug.Log("hit player 2");
+        }
         Destroy(bulletEffect);
     }
 }

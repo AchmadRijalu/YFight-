@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     public float jumpForce;
+    public ForceMode forceMode = ForceMode.Impulse;
 
 
     public KeyCode left;
@@ -37,7 +38,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, whatsIsGround);
         if (Input.GetKey(left))
         {
@@ -64,9 +64,19 @@ public class PlayerController : MonoBehaviour
             bulletClone.transform.localScale = transform.localScale;
 
             
+        } 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet"){
+            Debug.Log("hit");
+            var magnitude = 1800;
+            // calculate force vector
+            var force = transform.position - collision.transform.position;
+            // normalize force vector to get direction only and trim magnitude
+            force.Normalize();
+            gameObject.GetComponent<Rigidbody2D>().AddForce(force * magnitude);
         }
-
-
-
+        
     }
 }
