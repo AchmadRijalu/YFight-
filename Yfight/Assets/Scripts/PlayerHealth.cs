@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerHealth : MonoBehaviour
@@ -16,6 +17,11 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         //Debug.Log(currentHealth);
+        if(currentHealth <= 0)
+        {
+            Debug.Log("dead");
+            gameObject.SetActive(false);
+        }
     }
 
     public void takeDamage(float amount)
@@ -25,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("dead");
+            SceneManager.LoadScene(4);
         }
     }
 }
