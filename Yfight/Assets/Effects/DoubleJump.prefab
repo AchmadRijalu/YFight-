@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4680738975946064867}
   - component: {fileID: 7421240219842818877}
   - component: {fileID: 8257328271275733434}
-  - component: {fileID: 226802203788882494}
+  - component: {fileID: -2553990536398097587}
   m_Layer: 0
   m_Name: DoubleJump
   m_TagString: Untagged
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 11.255
---- !u!114 &226802203788882494
+--- !u!114 &-2553990536398097587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2108311022533452176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1266faecb8c56641b1249fd2b8533c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d032ae47f854b44a9a28dc2a80bf1cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Meteor: {fileID: 2108311022533452176}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1299237894269564734}
   - component: {fileID: 425044349800404253}
   - component: {fileID: 2812293027668051522}
-  - component: {fileID: 5086616062077647922}
+  - component: {fileID: -7132574717215848559}
   m_Layer: 0
   m_Name: Shrink
   m_TagString: Untagged
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 11.255
---- !u!114 &5086616062077647922
+--- !u!114 &-7132574717215848559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2112781193352261171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1266faecb8c56641b1249fd2b8533c4, type: 3}
+  m_Script: {fileID: 11500000, guid: e3512ece3d6980b409c7cc7dd360a919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Meteor: {fileID: 2112781193352261171}
