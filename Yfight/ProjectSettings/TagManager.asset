@@ -7,6 +7,9 @@ TagManager:
   - Player1
   - Player2
   - Bullet
+  - Shrink
+  - Heal
+  - DoubleJump
   layers:
   - Default
   - TransparentFX

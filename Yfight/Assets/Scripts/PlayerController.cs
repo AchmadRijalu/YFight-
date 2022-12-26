@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -77,6 +78,29 @@ public class PlayerController : MonoBehaviour
             force.Normalize();
             gameObject.GetComponent<Rigidbody2D>().AddForce(force * magnitude);
         }
-        
+
+        //if (collision.gameObject.tag == "Heal")
+        //{
+        //    Destroy(gameObject);
+        //    Debug.Log("Heal");
+        //    var health = collision.GetComponent<PlayerHealth>();
+        //    health.takeHeal(1);
+        //}
+        //if (collision.gameObject.tag == "Shrink")
+        //{
+        //    Destroy(gameObject);
+        //    Debug.Log("Heal");
+        //    var health = collision.GetComponent<PlayerHealth>();
+        //    health.takeHeal(1);
+        //}
+        //if (collision.gameObject.tag == "DoubleJump")
+        //{
+        //    Destroy(gameObject);
+        //    Debug.Log("Heal");
+        //    var health = collision.GetComponent<PlayerHealth>();
+        //    health.takeHeal(1);
+        //}
+
     }
+    
 }

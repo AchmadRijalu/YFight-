@@ -34,4 +34,14 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene(4);
         }
     }
+    public void takeHeal(float amount)
+    {
+        currentHealth += amount;
+
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
 }
