@@ -53,6 +53,30 @@ public class PowerUpHeal : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Player2")
+        {
+
+            collider.isTrigger = true;
+            Destroy(gameObject);
+
+            GameObject gameObjectp1 = GameObject.FindWithTag("Player2");
+            PlayerHealth playerHealth = gameObjectp1.GetComponentInChildren<PlayerHealth>();
+
+            playerHealth.takeHeal(1);
+
+            Debug.Log("heal player 2");
+        }
+        if (collision.gameObject.tag == "Player1")
+        {
+            collider.isTrigger = true;
+            Destroy(gameObject);
+
+            GameObject gameObjectp1 = GameObject.FindWithTag("Player1");
+            PlayerHealth playerHealth = gameObjectp1.GetComponentInChildren<PlayerHealth>();
+
+            playerHealth.takeHeal(1);
+            Debug.Log("heal player 1");
+        }
         collider.isTrigger = false;
     }
 }

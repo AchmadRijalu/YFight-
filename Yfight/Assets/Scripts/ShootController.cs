@@ -30,9 +30,9 @@ public class ShootController : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(bulletEffect, transform.position, transform.rotation);
+        var bulletEffectClone = Instantiate(bulletEffect, transform.position, transform.rotation);
         Destroy(gameObject);
-        Destroy(bulletEffect);
+        Destroy(bulletEffectClone, 1);
 
 
 

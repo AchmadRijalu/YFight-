@@ -22,7 +22,7 @@ public class MeteorController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(MeteorEffect, transform.position, transform.rotation);
+       var meteorEffectClone = Instantiate(MeteorEffect, transform.position, transform.rotation);
         if (collision.gameObject.tag == "Player2")
         {
             var health = collision.GetComponent<PlayerHealth>();
@@ -36,6 +36,6 @@ public class MeteorController : MonoBehaviour
             Debug.Log("hit player 2");
         }
         Destroy(gameObject);
-        Destroy(MeteorEffect);
+        Destroy(meteorEffectClone ,1);
     }
 }

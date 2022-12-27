@@ -36,6 +36,22 @@ public class PowerUpShrink : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Player2")
+        {
+
+            collider.isTrigger = true;
+            Destroy(gameObject);
+
+            Debug.Log("Shrink player 2");
+        }
+        if (collision.gameObject.tag == "Player1")
+        {
+            collider.isTrigger = true;
+            Destroy(gameObject);
+
+
+            Debug.Log("Shrink player 1");
+        }
         collider.isTrigger = false;
     }
 
