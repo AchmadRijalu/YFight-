@@ -43,5 +43,14 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
+    public void InstantDeath()
+    {
+        currentHealth = 0;
+        SceneManager.LoadScene(4);
+        //if (currentHealth > maxHealth)
+        //{
+        //    currentHealth = maxHealth;
+        //}
+    }
 
 }
