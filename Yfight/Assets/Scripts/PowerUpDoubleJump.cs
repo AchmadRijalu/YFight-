@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PowerUpDoubleJump : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Rigidbody2D rigidBody;
 
     private Collider2D collider;
@@ -23,16 +22,22 @@ public class PowerUpDoubleJump : MonoBehaviour
             collider.isTrigger = true;
             Destroy(gameObject);
 
+            GameObject playerGameObj = GameObject.FindWithTag("Player2");
+            PlayerController controller = playerGameObj.GetComponentInChildren<PlayerController>();
+
+            controller.canDoubleJump = true;
             Debug.Log("Double Jump player 2");
         }
         if (collision.gameObject.tag == "Player1")
         {
             collider.isTrigger = true;
             Destroy(gameObject);
+            GameObject playerGameObj = GameObject.FindWithTag("Player1");
+            PlayerController controller = playerGameObj.GetComponentInChildren<PlayerController>();
 
-           
+            controller.canDoubleJump = true;
 
-            
+
             Debug.Log("Double Jump player 1");
         }
     }

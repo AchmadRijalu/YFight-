@@ -21,7 +21,11 @@ public class PowerUpShrink : MonoBehaviour
         {
 
             collider.isTrigger = true;
-            Destroy(gameObject);
+            Destroy(gameObject); 
+            GameObject playerGameObj = GameObject.FindWithTag("Player2");
+            PlayerController controller = playerGameObj.GetComponentInChildren<PlayerController>();
+
+            controller.transform.localScale *= 0.5f;
 
             Debug.Log("Shrink player 2");
         }
@@ -29,7 +33,10 @@ public class PowerUpShrink : MonoBehaviour
         {
             collider.isTrigger = true;
             Destroy(gameObject);
+            GameObject playerGameObj = GameObject.FindWithTag("Player1");
+            PlayerController controller = playerGameObj.GetComponentInChildren<PlayerController>();
 
+            controller.transform.localScale *= 0.5f;
 
             Debug.Log("Shrink player 1");
         }

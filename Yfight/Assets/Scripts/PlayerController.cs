@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public float groundCheckRadius;
     public LayerMask whatsIsGround;
+    public bool canDoubleJump;
 
 
     //shooting 
@@ -55,10 +56,26 @@ public class PlayerController : MonoBehaviour
             rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
         }
 
-        if (Input.GetKeyDown(jump) && isGrounded)
+        if (Input.GetKeyDown(jump))
         {
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+            Debug.Log(jump + " pressed, then jump");
+            if (isGrounded)
+            {
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+            } else {
+                if (canDoubleJump)
+                {
+                    rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+                    canDoubleJump = false;
+                }
+            }
         }
+
+        /*if(isGrounded && !Input.GetKeyDown(jump))
+        { 
+            canDoubleJump = false;
+        }*/
+
         if (Input.GetKeyDown(shoot))
         {
            GameObject bulletClone = (GameObject)Instantiate(bullet, throwPoint.position, throwPoint.rotation);
