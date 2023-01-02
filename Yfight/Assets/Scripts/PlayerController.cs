@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public ForceMode forceMode = ForceMode.Impulse;
-
+    [SerializeField] private AudioClip shooted;
+    [SerializeField] private AudioClip hitted;
 
     public KeyCode left;
     public KeyCode right;
@@ -31,9 +32,14 @@ public class PlayerController : MonoBehaviour
     //shooting 
     public GameObject bullet;
     public Transform throwPoint;
+
+
+    //Animation
+    public Animator anim;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
     }
 
@@ -44,12 +50,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(left))
         {
             rigidbody.velocity = new Vector2(-moveSpeed, rigidbody.velocity.y);
-            transform.localScale = new Vector2(-2,2);
+            transform.localScale = new Vector2(-1,1);
         }
         else if (Input.GetKey(right))
         {
             rigidbody.velocity = new Vector2(moveSpeed, rigidbody.velocity.y);
-            transform.localScale = new Vector2(2, 2);
+            transform.localScale = new Vector2(1, 1);
         }
         else
         {
@@ -80,13 +86,28 @@ public class PlayerController : MonoBehaviour
         {
            GameObject bulletClone = (GameObject)Instantiate(bullet, throwPoint.position, throwPoint.rotation);
             bulletClone.transform.localScale = transform.localScale;
-
             
-        } 
+            SoundManager.instance.PlaySound(shooted);
+
+
+        }
+
+        if(rigidbody.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(rigidbody.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        anim.SetFloat("Speed", Mathf.Abs(rigidbody.velocity.x));
+        anim.SetBool("Grounded", isGrounded);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet"){
+            SoundManager.instance.PlaySound(hitted);
             Debug.Log("hit");
             var magnitude = 1800;
             // calculate force vector

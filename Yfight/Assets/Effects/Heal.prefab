@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Meteor: {fileID: 7010585126599641872}
+  Healed: {fileID: 8300000, guid: e4b65a4a8a3cf804eb7d7399b3a822f4, type: 3}

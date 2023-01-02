@@ -9,6 +9,7 @@ public class PowerUpHeal : MonoBehaviour
 
     private Collider2D collider;
     public GameObject Meteor;
+    [SerializeField] private AudioClip Healed;
     void Start()
     {
         
@@ -28,7 +29,7 @@ public class PowerUpHeal : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player2")
         {
-
+            SoundManager.instance.PlaySound(Healed);
             collider.isTrigger = true;
             Destroy(gameObject);
 
@@ -41,6 +42,7 @@ public class PowerUpHeal : MonoBehaviour
         }
         if (collision.gameObject.tag == "Player1")
         {
+            SoundManager.instance.PlaySound(Healed);
             collider.isTrigger = true;
             Destroy(gameObject);
             
@@ -55,7 +57,7 @@ public class PowerUpHeal : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player2")
         {
-
+            SoundManager.instance.PlaySound(Healed);
             collider.isTrigger = true;
             Destroy(gameObject);
 
@@ -68,6 +70,7 @@ public class PowerUpHeal : MonoBehaviour
         }
         if (collision.gameObject.tag == "Player1")
         {
+            SoundManager.instance.PlaySound(Healed);
             collider.isTrigger = true;
             Destroy(gameObject);
 
