@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 609006202}
   - component: {fileID: 609006201}
   m_Layer: 5
-  m_Name: GameOver (1)
+  m_Name: PlayerWin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.15
+  m_fontSize: 33.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.25
+  m_fontSize: 63.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 760302441}
   - component: {fileID: 760302440}
   - component: {fileID: 760302439}
+  - component: {fileID: 760302443}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -661,6 +662,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &760302443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760302438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f528cccff011e643b44edcd35c7cf18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winText: {fileID: 609006199}
 --- !u!1 &891735638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1050,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.9
+  m_fontSize: 30.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

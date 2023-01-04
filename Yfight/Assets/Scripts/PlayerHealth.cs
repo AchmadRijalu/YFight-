@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Debug.Log("dead");
-            gameObject.SetActive(false);
+            /*gameObject.SetActive(false);*/
         }
     }
 
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("dead");
-            SceneManager.LoadScene(4);
+            /*SceneManager.LoadScene(4);*/
         }
     }
     public void takeHeal(float amount)
@@ -51,6 +51,14 @@ public class PlayerHealth : MonoBehaviour
         //{
         //    currentHealth = maxHealth;
         //}
+    }
+
+    public void restoreHealth()
+    {
+        for (int i = 0; i <= maxHealth ; i++)
+        {
+            currentHealth++;
+        }
     }
 
 }
