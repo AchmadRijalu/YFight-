@@ -83,12 +83,12 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void HurtP1()
+    public void HoleP1()
     {
-        P1Life -= 1;
+        P1Life = 0;
     }
-    public void HurtP2()
+    public void HoleP2()
     {
-        P2Life -= 1;
+        P2Life = 0;
     }
 }
