@@ -29,11 +29,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         P1health = player1.GetComponent<PlayerHealth>().currentHealth;
         P2health = player2.GetComponent<PlayerHealth>().currentHealth;
-
-
 
         if (P1health <= 0)
         {
