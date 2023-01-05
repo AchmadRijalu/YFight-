@@ -46,11 +46,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerMovement();
+    }
+    private void PlayerMovement()
+    {
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, whatsIsGround);
         if (Input.GetKey(left))
         {
             rigidbody.velocity = new Vector2(-moveSpeed, rigidbody.velocity.y);
-            transform.localScale = new Vector2(-1,1);
+            transform.localScale = new Vector2(-1, 1);
         }
         else if (Input.GetKey(right))
         {
@@ -68,7 +72,9 @@ public class PlayerController : MonoBehaviour
             if (isGrounded)
             {
                 rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
-            } else {
+            }
+            else
+            {
                 if (canDoubleJump)
                 {
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
@@ -84,19 +90,19 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(shoot))
         {
-           GameObject bulletClone = (GameObject)Instantiate(bullet, throwPoint.position, throwPoint.rotation);
+            GameObject bulletClone = (GameObject)Instantiate(bullet, throwPoint.position, throwPoint.rotation);
             bulletClone.transform.localScale = transform.localScale;
-            
+
             SoundManager.instance.PlaySound(shooted);
 
 
         }
 
-        if(rigidbody.velocity.x < 0)
+        if (rigidbody.velocity.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if(rigidbody.velocity.x > 0)
+        else if (rigidbody.velocity.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
