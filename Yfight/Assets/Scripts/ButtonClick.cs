@@ -14,11 +14,4 @@ public class ButtonClick : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public void setPause()
-    {
-        PauseMenu pauseMenu = new PauseMenu();
-        pauseMenu.setGameState();
-    }
-
 }

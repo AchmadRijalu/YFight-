@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ecaa7f420c993e4f9a54f7cd831403a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 50
+  bulletSpeed: 15
   bulletEffect: {fileID: 6717839507832245049, guid: 2198f6c737625094782d391bef01af14, type: 3}
   playerHealth1: {fileID: 0}
   playerHealth2: {fileID: 0}
