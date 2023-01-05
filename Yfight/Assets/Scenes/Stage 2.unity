@@ -813,6 +813,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceFighter
       objectReference: {fileID: 0}
+    - target: {fileID: 6358667346065114287, guid: 530f70f125a4376408841179395a3379, type: 3}
+      propertyPath: hitted
+      value: 
+      objectReference: {fileID: 8300000, guid: 8afe525d9a8184a4d99e6aab66cdda9d, type: 3}
+    - target: {fileID: 6358667346065114287, guid: 530f70f125a4376408841179395a3379, type: 3}
+      propertyPath: shooted
+      value: 
+      objectReference: {fileID: 8300000, guid: 8db5786f3e8af3f49a8e4840a3c48060, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 530f70f125a4376408841179395a3379, type: 3}
 --- !u!1 &210400920
@@ -4336,6 +4344,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1891170326080410128, guid: 2f8657bf4abf3fc4e95baaadc3cbdc8a, type: 3}
+      propertyPath: hitted
+      value: 
+      objectReference: {fileID: 8300000, guid: 27a3bd0b79f15354e9d128430d25efae, type: 3}
+    - target: {fileID: 1891170326080410128, guid: 2f8657bf4abf3fc4e95baaadc3cbdc8a, type: 3}
+      propertyPath: shooted
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a3cd46fed84ae14f91084b4c589704d, type: 3}
     - target: {fileID: 1891170326080410134, guid: 2f8657bf4abf3fc4e95baaadc3cbdc8a, type: 3}
       propertyPath: m_Name
       value: SpaceFighter 2

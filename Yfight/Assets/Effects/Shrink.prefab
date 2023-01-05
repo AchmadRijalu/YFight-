@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Meteor: {fileID: 2112781193352261171}
-  Shrink: {fileID: 8300000, guid: e4b65a4a8a3cf804eb7d7399b3a822f4, type: 3}
+  Shrink: {fileID: 8300000, guid: b98432d54c67f3246aebf80f8278308f, type: 3}
