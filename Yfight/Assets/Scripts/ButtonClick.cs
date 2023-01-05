@@ -20,4 +20,5 @@ public class ButtonClick : MonoBehaviour
         PauseMenu pauseMenu = new PauseMenu();
         pauseMenu.setGameState();
     }
+
 }
