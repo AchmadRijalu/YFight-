@@ -4523,7 +4523,7 @@ GameObject:
   - component: {fileID: 1330518432}
   m_Layer: 0
   m_Name: Supply
-  m_TagString: Untagged
+  m_TagString: Suply
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4917,7 +4917,7 @@ GameObject:
   - component: {fileID: 1668447061}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5328,6 +5328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1891170326080410130, guid: 2f8657bf4abf3fc4e95baaadc3cbdc8a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 625256ea06689ee4b98775987ceff3c4, type: 2}
     - target: {fileID: 1891170326080410134, guid: 2f8657bf4abf3fc4e95baaadc3cbdc8a, type: 3}
       propertyPath: m_Name
       value: SpaceFighter 2
@@ -5385,6 +5389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6358667346065114273, guid: 530f70f125a4376408841179395a3379, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 625256ea06689ee4b98775987ceff3c4, type: 2}
     - target: {fileID: 6358667346065114275, guid: 530f70f125a4376408841179395a3379, type: 3}
       propertyPath: m_RootOrder
       value: 5

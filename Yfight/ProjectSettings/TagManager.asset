@@ -11,6 +11,8 @@ TagManager:
   - Heal
   - DoubleJump
   - Hole
+  - Suply
+  - Obstacle
   layers:
   - Default
   - TransparentFX
