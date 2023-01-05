@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    /*PauseMenu pause = new PauseMenu();*/
     public GameObject player1;
     public GameObject player2;
 
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*pause.isPaused = false;*/
     }
 
     // Update is called once per frame
